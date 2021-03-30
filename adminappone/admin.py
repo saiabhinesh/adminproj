@@ -6,4 +6,4 @@ class customadmin(admin.AdminSite):
     site_title = "my site title"
     index_title = 'my index title'
 
-csad=customadmin()
+csad=customadmin()#if models are there register here
