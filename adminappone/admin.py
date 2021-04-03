@@ -13,5 +13,12 @@ class padmin(admin.ModelAdmin):
     print("in model")
     fields = ['pname']
 
-adm1=adminone(name='admone') #if models are there register here.
+adm1=adminone(name='admone')
 adm1.register(person,padmin)
+
+refcustomadmin=customadmin(name='admcsu')
+from django.apps import apps
+models = apps.get_models()
+for model in models:
+    refcustomadmin.register(model)
+#refcustomadmin.site.unregister(django.contrib.sessions.models.session) need to change syntax

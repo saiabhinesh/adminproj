@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import path
 from adminappone.admin import *
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', refcustomadmin.urls),#path('admin/', admin.site.urls), default url pattern for custom admin
     path('admone/',adm1.urls),
 ]
